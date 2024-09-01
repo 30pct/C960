@@ -135,5 +135,3 @@ We want the answer to be $1$:
 $\text{mod}(3 \times 107, 160) = 1$
 
 Thus, the answer is b) 107.  
-
-Done in 5 seconds.
