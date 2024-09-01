@@ -2,8 +2,7 @@
 # 2.Number Theory & Cryptography
 ## RSA Encryption
 
-### Step 1: Key Generation
-
+**Step 1: Key Generation**
 1. **Choose two distinct prime numbers**:  
    - Let $p = 61$ and $q = 53$. These are two large prime numbers.
    - **Example**: We select $p = 61$ and $q = 53$.
@@ -30,7 +29,7 @@
    - The **private key** is $(d, n)$.
    - **Example**: Public key is $(17, 3233)$, and private key is $(2753, 3233)$.
 
-### Step 2: Encryption
+**Step 2: Encryption**
 
 1. **Convert the plaintext message into an integer**:  
    - Let the plaintext be represented as an integer $m$ such that $0 \leq m < n$.
@@ -44,7 +43,7 @@
      $65^{17} \pmod{3233} = 2790$  
    - So, the ciphertext $c = 2790$.
 
-### Step 3: Decryption
+**Step 3: Decryption**
 
 1. **Compute the plaintext from the ciphertext**:  
    - Using the private key $(d, n)$, the plaintext $m$ is recovered from the ciphertext $c$:
