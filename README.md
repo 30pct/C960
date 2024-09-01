@@ -1,5 +1,70 @@
 # C960 WGU C960 Discrete Math II
 # 2.Number Theory & Cryptography
+## Successive Squaring / Fast Exponentiation
+### Step-by-Step Guide to Successive Squaring
+**Example: Compute $`3^{50} \mod 23`$**
+
+1. **Convert the Exponent to Binary:**
+   - The exponent $`50`$ in binary is $`110010_2`$. This means:
+
+```math
+50 = 2^5 + 2^4 + 2^1
+```
+
+   - This tells us that $`3^{50}`$ can be rewritten using the binary representation:
+
+```math
+3^{50} = 3^{2^5} \cdot 3^{2^4} \cdot 3^{2^1}
+```
+
+2. **Compute Powers of 3 Using Successive Squaring:**
+   - We compute $`3^{2^n} \mod 23`$ for $`n = 0, 1, 2, 3, 4, 5`$. Create a table for these computations:
+
+```math
+\begin{array}{c|c}
+n & 3^{2^n} \mod 23 \\ \hline
+0 & 3^1 \mod 23 = 3 \\
+1 & 3^2 \mod 23 = 9 \\
+2 & (3^2)^2 = 3^4 \mod 23 = 81 \mod 23 = 12 \\
+3 & (3^4)^2 = 3^8 \mod 23 = 144 \mod 23 = 6 \\
+4 & (3^8)^2 = 3^{16} \mod 23 = 36 \mod 23 = 13 \\
+5 & (3^{16})^2 = 3^{32} \mod 23 = 169 \mod 23 = 8 \\
+\end{array}
+```
+
+3. **Combine the Required Powers:**
+   - Using the binary expansion of $`50`$, we need:
+
+```math
+3^{50} \mod 23 = 3^{32} \cdot 3^{16} \cdot 3^2 \mod 23
+```
+
+   - Substitute from the table:
+
+```math
+3^{50} \mod 23 = 8 \cdot 13 \cdot 9 \mod 23
+```
+
+4. **Calculate the Result:**
+   - Multiply step-by-step modulo $`23`$:
+
+```math
+8 \cdot 13 = 104 \quad \text{and} \quad 104 \mod 23 = 12
+```
+
+```math
+12 \cdot 9 = 108 \quad \text{and} \quad 108 \mod 23 = 16
+```
+
+   Thus, $`3^{50} \mod 23 = 16`$.
+
+### General Steps for Successive Squaring
+
+1. **Convert the exponent to binary form** to determine which powers of the base are needed.
+2. **Compute powers of the base up to the largest power needed** using repeated squaring.
+3. **Multiply the required powers together modulo $`m`$** to get the final result.
+
+By following this method, large powers modulo $`m`$ can be computed efficiently without directly calculating very large numbers.
 ## RSA Encryption
 
 **Step 1: Key Generation**
