@@ -52,3 +52,31 @@
      To simplify:  
      $2790^{2753} \pmod{3233} = 65$  
    - The original message $m = 65$ is recovered.
+
+### Shortcut for finding the private key
+An individual has chosen the public key of $N = 187 = 11 \times 17$ and $e = 3$. What is the private key using RSA encryption?  
+a) 2   b) 107   c) 15   d) 160
+
+Given:  
+$e = 3$  
+
+Calculate $\phi$:  
+$\phi = (11 - 1) \times (17 - 1) = 160$
+
+On a calculator, compute:
+
+$\text{mod}(e \times a, \phi)$
+
+$\text{mod}(e \times b, \phi)$
+
+$\text{mod}(e \times c, \phi)$
+
+$\text{mod}(e \times d, \phi)$
+
+We want the answer to be $1$:  
+
+$\text{mod}(3 \times 107, 160) = 1$
+
+Thus, the answer is b) 107.  
+
+Done in 5 seconds.
