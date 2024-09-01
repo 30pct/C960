@@ -56,6 +56,60 @@ n & 3^{2^n} \mod 23 \\ \hline
 ```
 
    Thus, $`3^{50} \mod 23 = 16`$.
+   
+### Unit digits
+To find the last $x$ binary digits of an exponential expression $a^b$, you need to compute $a^b \mod 2^x$. This result will give you the last $x$ binary digits of $a^b$. Here's how you can do it step-by-step:
+
+**Example**
+
+Suppose you want to find the last 5 binary digits of $3^{13}$.
+
+1. **Calculate $2^5$**: 
+```math
+2^5 = 32
+```
+
+2. **Compute $3^{13} \mod 32$**:
+   - Instead of calculating $3^{13}$ directly, use modular exponentiation.
+
+Here's a breakdown using the method of exponentiation by squaring:
+
+```math
+3^{13} \mod 32
+```
+
+- Write 13 in binary: $13 = 1101_2$. This means $13 = 2^3 + 2^2 + 2^0$.
+
+- Compute the following:
+```math
+3^1 \mod 32 = 3
+```
+```math
+3^2 \mod 32 = 9
+```
+```math
+3^4 \mod 32 = (3^2)^2 \mod 32 = 9^2 \mod 32 = 81 \mod 32 = 17
+```
+```math
+3^8 \mod 32 = (3^4)^2 \mod 32 = 17^2 \mod 32 = 289 \mod 32 = 1
+```
+
+Now, combine the relevant powers (those corresponding to 1s in the binary representation of 13):
+
+```math
+3^{13} \mod 32 = (3^8 \times 3^4 \times 3^1) \mod 32
+```
+```math
+= (1 \times 17 \times 3) \mod 32
+```
+```math
+= 51 \mod 32
+```
+```math
+= 19
+```
+
+The last 5 binary digits of $3^{13}$ are the binary representation of 19, which is $10011_2$.
 
 ## RSA Encryption
 
