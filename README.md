@@ -1,6 +1,6 @@
 # C960 WGU C960 Discrete Math II
 # 2.Number Theory & Cryptography
-## Successive Squaring / Fast Exponentiation
+## Successive Squaring
 **Example: Compute $`3^{50} \mod 23`$**
 
 1. **Convert the Exponent to Binary:**
