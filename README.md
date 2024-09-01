@@ -1,7 +1,6 @@
 # C960 WGU C960 Discrete Math II
 # 2.Number Theory & Cryptography
 ## Successive Squaring / Fast Exponentiation
-### Step-by-Step Guide to Successive Squaring
 **Example: Compute $`3^{50} \mod 23`$**
 
 1. **Convert the Exponent to Binary:**
@@ -58,13 +57,6 @@ n & 3^{2^n} \mod 23 \\ \hline
 
    Thus, $`3^{50} \mod 23 = 16`$.
 
-### General Steps for Successive Squaring
-
-1. **Convert the exponent to binary form** to determine which powers of the base are needed.
-2. **Compute powers of the base up to the largest power needed** using repeated squaring.
-3. **Multiply the required powers together modulo $`m`$** to get the final result.
-
-By following this method, large powers modulo $`m`$ can be computed efficiently without directly calculating very large numbers.
 ## RSA Encryption
 
 **Step 1: Key Generation**
