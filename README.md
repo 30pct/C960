@@ -111,6 +111,8 @@ Now, combine the relevant powers (those corresponding to 1s in the binary repres
 
 The last 5 binary digits of $3^{13}$ are the binary representation of 19, which is $10011_2$.
 
+To calculate the last $x$ digits of an exponential expression, $a^b$, you can use modular arithmetic. Specifically, you're looking for $a^b \mod 10^x$.
+
 ## RSA Encryption
 
 **Step 1: Key Generation**
