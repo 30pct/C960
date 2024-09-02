@@ -135,7 +135,7 @@ x \cdot a \equiv 1 \pmod{b}
 19 \cdot 191 \equiv 1 \pmod{111}
 ```
 
-## Successive Squaring
+## Fast Exponentiation
 **Example: Compute $`3^{50} \mod 23`$**
 
 1. **Convert the Exponent to Binary:**
