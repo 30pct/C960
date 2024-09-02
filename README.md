@@ -1,5 +1,76 @@
 # C960 WGU C960 Discrete Math II
 # 2.Number Theory & Cryptography
+## Modular Arithmetic
+**Problem:**
+
+Evaluate the following expressions:
+
+a. $9 \times 3$ in $\mathbb{Z}_{20}$
+
+b. $15^{26} \mod 7$
+
+c. $(352 \cdot 407) \mod 50$
+
+d. $(1302^3 + 4505^2) \mod 10$
+
+**Solution:**
+
+Using the rules for arithmetic operations modulo $n$:
+
+a. Arithmetic in $\mathbb{Z}_{20}$ is the same as $\mod 20$, so we get:
+
+```math
+9 \times 3 \mod 20 = 27 \mod 20 = 7
+```
+
+b. 
+
+```math
+15^{26} \mod 7 = (15 \mod 7)^{26} \mod 7 = (1)^{26} \mod 7 = 1 \mod 7 = 1
+```
+
+c. 
+
+```math
+(352 \cdot 407) \mod 50 = [(352 \mod 50) \cdot (407 \mod 50)] \mod 50
+```
+
+Calculating further:
+
+```math
+352 \mod 50 = 2, \quad 407 \mod 50 = 7
+```
+
+So,
+
+```math
+(2 \cdot 7) \mod 50 = 14 \mod 50 = 14
+```
+
+d. 
+
+```math
+(1302^3 + 4505^2) \mod 10 = [(1302^3 \mod 10) + (4505^2 \mod 10)] \mod 10
+```
+
+First, calculate:
+
+```math
+1302 \mod 10 = 2, \quad 4505 \mod 10 = 5
+```
+
+Then:
+
+```math
+[(2^3 \mod 10) + (5^2 \mod 10)] \mod 10 = [(8 \mod 10) + (25 \mod 10)] \mod 10
+```
+
+This simplifies to:
+
+```math
+[8 + 5] \mod 10 = 13 \mod 10 = 3
+```
+
 ## Successive Squaring
 **Example: Compute $`3^{50} \mod 23`$**
 
