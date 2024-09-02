@@ -330,7 +330,6 @@ Given:
 $e = 3$  
 
 Calculate $\phi$:
-$\phi(p)=prime #−1$
 $\phi = (11 - 1) \times (17 - 1) = 160$
 
 On a calculator, compute:
