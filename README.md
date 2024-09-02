@@ -96,13 +96,13 @@ y_{i+1} = y_{i-1} - q_i \cdot y_i
    - Repeat these steps until the remainder $r$ becomes 0.
 
 4. **Interpret the Results**:
-   - The last non-zero remainder $r$ is the GCD of the original numbers.
-   - The coefficients $x$ and $y$ from the corresponding row where $b = 1$ (last non-zero $r$) are the Bézout coefficients for the equation:
+   - The last non-zero remainder $r$ is the **GCD** of the original numbers.
+   - The coefficients $x$ and $y$ from the corresponding row where $b = 1$ (last non-zero $r$) are the **Bézout coefficients** for the equation:
 
 ```math
 \text{gcd}(a, b) = a \cdot x + b \cdot y
 ```
-   - The coefficient $x$ is the inverse of $a \ mod \ b$, which can be expressed as:
+   - The coefficient $x$ is the **inverse** of $a \ mod \ b$, which can be expressed as:
 
 ```math
 x \cdot a \equiv 1 \pmod{b}
@@ -246,7 +246,7 @@ Now, combine the relevant powers (those corresponding to 1s in the binary repres
 
 The last 5 binary digits of $3^{13}$ are the binary representation of 19, which is $10011_2$.
 
-To calculate the last $x$ digits of an exponential expression, $a^b$, you can use modular arithmetic. Specifically, you're looking for $a^b \mod 10^x$.
+> To calculate the last $x$ digits of an exponential expression, $a^b$, you can use modular arithmetic. Specifically, you're looking for $a^b \mod 10^x$.
 
 ## RSA Encryption
 
