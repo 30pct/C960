@@ -70,6 +70,70 @@ This simplifies to:
 ```math
 [8 + 5] \mod 10 = 13 \mod 10 = 3
 ```
+## Extended Euclidean Algorithm
+
+1. **Set Up the Table**: 
+   - Prepare a table with columns for the values of $a$, $b$, the quotient $q$, the remainder $r$, and the coefficients $x$ and $y$.
+
+2. **Initialize the Table**:
+   - The first row corresponds to the initial values of $a$ (the larger of the two integers) and $b$ (the smaller one).
+   - Set the coefficients for $x$ and $y$ in the first row as $x_1 = 1$, $y_1 = 0$ and for the second row as $x_2 = 0$, $y_2 = 1$.
+
+3. **Iterate to Fill the Table**: 
+   - **Calculate the Quotient**: In each iteration, compute the quotient $q = \lfloor a_i / b_i \rfloor$.
+   - **Calculate the Remainder**: Compute the remainder $r = a_i - q \cdot b_i$.
+   - **Update the Coefficients**: Update the values of $x$ and $y$ using the previous values:
+
+```math
+x_{i+1} = x_{i-1} - q_i \cdot x_i
+```
+
+```math
+y_{i+1} = y_{i-1} - q_i \cdot y_i
+```
+    
+   - **Update $a$ and $b$**: Set $a_{i+1} = b_i$ and $b_{i+1} = r_i$ for the next iteration.
+   - Repeat these steps until the remainder $r$ becomes 0.
+
+4. **Interpret the Results**:
+   - The last non-zero remainder $r$ is the GCD of the original numbers.
+   - The coefficients $x$ and $y$ from the corresponding row where $b = 1$ (last non-zero $r$) are the Bézout coefficients for the equation:
+
+```math
+\text{gcd}(a, b) = a \cdot x + b \cdot y
+```
+   - The coefficient $x$ is the inverse of $a \ mod \ b$, which can be expressed as:
+
+```math
+x \cdot a \equiv 1 \pmod{b}
+```
+**Chart**
+
+| Step | $a$  | $b$  | $q$ | $r$  | $x$  | $y$  |
+|------|------|------|-----|------|------|------|
+| 1    | 191  | 111  | 1   | 80   | 1    | 0    |
+| 2    | 111  | 80   | 1   | 31   | 0    | 1    |
+| 3    | 80   | 31   | 2   | 18   | 1    | -1   |
+| 4    | 31   | 18   | 1   | 13   | -1   | 2    |
+| 5    | 18   | 13   | 1   | 5    | 2    | -3   |
+| 6    | 13   | 5    | 2   | 3    | -3   | 5    |
+| 7    | 5    | 3    | 1   | 2    | 8    | -13  |
+| 8    | 3    | 2    | 1   | 1    | -11  | 18   |
+| 9    | 2    | 1    | 2   | 0    | 19   | -31  |
+
+
+**Final Result**
+   - The last non-zero remainder is 1, which indicates that 191 and 111 are coprime.
+- The Bézout coefficients for the equation $191 \cdot x + 111 \cdot y = 1$ are $x = 19$ and $y = -31$. Thus,
+
+```math
+191 \cdot 19 + 111 \cdot (-31) = 1
+```
+- The coefficient $x = 19$ is the inverse of $a = 191$ modulo $b = 111$, which can be expressed as:
+
+```math
+19 \cdot 191 \equiv 1 \pmod{111}
+```
 
 ## Successive Squaring
 **Example: Compute $`3^{50} \mod 23`$**
