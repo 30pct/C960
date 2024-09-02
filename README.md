@@ -329,7 +329,8 @@ a) 2   b) 107   c) 15   d) 160
 Given:  
 $e = 3$  
 
-Calculate $\phi$:  
+Calculate $\phi$:
+$\phi(p)=prime #−1$
 $\phi = (11 - 1) \times (17 - 1) = 160$
 
 On a calculator, compute:
