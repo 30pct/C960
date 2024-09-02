@@ -1,6 +1,27 @@
 # C960 WGU C960 Discrete Math II
 # 2.Number Theory & Cryptography
 ## Modular Arithmetic
+
+1. The equation for division with remainder is given by:
+```math
+a = dq + r
+```
+where $a$ is the dividend, $d$ is the divisor, $q$ is the quotient, and $r$ is the remainder.
+
+2. The definition of the division operation is expressed as:
+```math
+\text{a div d} = q
+```
+This means when $a$ is divided by $d$, the integer quotient is $q$.
+
+3. The definition of the modulus operation is:
+```math
+\text{a mod d} = r
+```
+This means when $a$ is divided by $d$, the remainder is $r$. 
+
+These equations together describe the division algorithm where $0 \leq r < d$.
+
 **Problem:**
 
 Evaluate the following expressions:
