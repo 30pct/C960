@@ -1,4 +1,3 @@
-# C960 WGU C960 Discrete Math II
 # 2.Number Theory & Cryptography
 ## Modular Arithmetic
 
