@@ -128,7 +128,7 @@ n & 3^{2^n} \mod 23 \\ \hline
 
    Thus, $`3^{50} \mod 23 = 16`$.
    
-### Unit digits
+## Unit digits
 To find the last $x$ binary digits of an exponential expression $a^b$, you need to compute $a^b \mod 2^x$. This result will give you the last $x$ binary digits of $a^b$. Here's how you can do it step-by-step:
 
 **Example**
