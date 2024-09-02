@@ -447,5 +447,3 @@ Steps:
 - Convert: $1=0001$, $A=1010$, $D=1101$
 
 Binary: $000110101101_2$
-
-These steps form the simplest algorithms for converting numbers between binary, decimal, and hexadecimal systems.
