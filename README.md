@@ -325,4 +325,107 @@ We want the answer to be $1$:
 
 $\text{mod}(3 \times 107, 160) = 1$
 
-Thus, the answer is b) 107.  
+Thus, the answer is b) 107.
+
+## Binary-Decimal-Hexadecimal Expansions
+
+**Binary to Decimal**  
+To convert a binary number to a decimal:
+
+1. Write down the binary number.
+2. Assign powers of 2 to each digit, starting from the rightmost digit (which gets $2^0$).
+3. Multiply each binary digit by its corresponding power of 2.
+4. Sum all the products to get the decimal number.
+
+**Example:**  
+Convert $1101_2$ to decimal.
+
+Calculation:
+```math
+1 \times 2^3 + 1 \times 2^2 + 0 \times 2^1 + 1 \times 2^0 = 8 + 4 + 0 + 1 = 13
+```
+
+**Decimal to Binary**  
+To convert a decimal number to binary:
+
+1. Divide the decimal number by 2.
+2. Record the remainder (0 or 1) — this gives the least significant bit.
+3. Divide the quotient by 2 and repeat until the quotient is 0.
+4. The binary number is read from bottom (least significant bit) to top (most significant bit).
+
+**Example:**  
+Convert $13_{10}$ to binary.
+
+Steps:
+- $13 \div 2 = 6$ remainder $1$
+- $6 \div 2 = 3$ remainder $0$
+- $3 \div 2 = 1$ remainder $1$
+- $1 \div 2 = 0$ remainder $1$
+
+Binary: $1101_2$
+
+**Hexadecimal to Decimal**  
+To convert a hexadecimal number to a decimal:
+
+1. Write down the hexadecimal number.
+2. Assign powers of 16 to each digit, starting from the rightmost digit (which gets $16^0$).
+3. Convert any lettered hexadecimal digits (A-F) to their decimal equivalents (A=10, B=11, ..., F=15).
+4. Multiply each digit by its corresponding power of 16.
+5. Sum all the products to get the decimal number.
+
+**Example:**  
+Convert $1A3_{16}$ to decimal.
+
+Calculation:
+```math
+1 \times 16^2 + 10 \times 16^1 + 3 \times 16^0 = 256 + 160 + 3 = 419
+```
+
+**Decimal to Hexadecimal**  
+To convert a decimal number to hexadecimal:
+
+1. Divide the decimal number by 16.
+2. Record the remainder. If the remainder is 10-15, use the equivalent hexadecimal digit (A-F).
+3. Divide the quotient by 16 and repeat until the quotient is 0.
+4. The hexadecimal number is read from bottom to top.
+
+**Example:**  
+Convert $419_{10}$ to hexadecimal.
+
+Steps:
+- $419 \div 16 = 26$ remainder $3$
+- $26 \div 16 = 1$ remainder $10$ (which is $A$)
+- $1 \div 16 = 0$ remainder $1$
+
+Hexadecimal: $1A3_{16}$
+
+**Binary to Hexadecimal**  
+To convert a binary number to hexadecimal:
+
+1. Group the binary digits into sets of four, starting from the right. Add leading zeros if necessary.
+2. Convert each 4-digit binary group to its hexadecimal equivalent [via decimal].
+
+**Example:**  
+Convert $110101101_2$ to hexadecimal.
+
+Steps:
+- Group: $0001\ 1010\ 1101$
+- Convert: $1=1$, $1010=A$, $1101=D$
+
+Hexadecimal: $1AD_{16}$
+
+**Hexadecimal to Binary**  
+To convert a hexadecimal number to binary:
+
+1. Write down the hexadecimal number.
+2. Convert each hexadecimal digit to its 4-digit binary equivalent [via decimal].
+
+**Example:**  
+Convert $1AD_{16}$ to binary.
+
+Steps:
+- Convert: $1=0001$, $A=1010$, $D=1101$
+
+Binary: $000110101101_2$
+
+These steps form the simplest algorithms for converting numbers between binary, decimal, and hexadecimal systems.
