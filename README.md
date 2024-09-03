@@ -452,6 +452,12 @@ Binary: $000110101101_2$
 ## Summation
 General Formula for Summation over Cartesian Product
 
+When you sum the product of all elements from two sets, you're essentially summing over the Cartesian product:
+
+```math
+\sum_{(x, y) \in A \times B} x \cdot y
+```
+
 For two sets of numbers $A = \{a_1, a_2, \ldots, a_m\}$ and $B = \{b_1, b_2, \ldots, b_n\}$, the general formula for summing the product of every combination of their elements is:
 
 ```math
