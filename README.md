@@ -347,7 +347,7 @@ $\text{mod}(3 \times 107, 160) = 1$
 
 Thus, the answer is b) 107.
 
-## Binary-Decimal-Hexadecimal Expansions
+## Expansions
 
 **Binary to Decimal**  
 To convert a binary number to a decimal:
