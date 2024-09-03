@@ -447,3 +447,13 @@ Steps:
 - Convert: $1=0001$, $A=1010$, $D=1101$
 
 Binary: $000110101101_2$
+
+# Recursion
+## Summation
+General Formula for Summation over Cartesian Product
+
+For two sets of numbers $A = \{a_1, a_2, \ldots, a_m\}$ and $B = \{b_1, b_2, \ldots, b_n\}$, the general formula for summing the product of every combination of their elements is:
+
+```math
+\text{Sum} = \left( \sum_{a \in A} a \right) \times \left( \sum_{b \in B} b \right)
+```
