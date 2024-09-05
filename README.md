@@ -448,7 +448,64 @@ Steps:
 
 Binary: $000110101101_2$
 
-# Recursion
+# 3. Recursion & Induction
+## Induction
+**The statement to prove:**
+
+We need to prove that for all $n \geq 0$,
+
+```math
+1 + 2 + 2^2 + \cdots + 2^n = 2^{n+1} - 1
+```
+
+**Step 1: Base Case ($n = 0$)**
+
+Check if the formula holds for $n = 0$.
+
+On the left-hand side, we have:
+
+```math
+1 = 2^{0+1} - 1 = 2^1 - 1 = 1
+```
+
+The base case is true.
+
+**Step 2: Inductive Hypothesis**
+
+Assume the formula holds for some arbitrary $n = k$:
+
+```math
+1 + 2 + 2^2 + \cdots + 2^k = 2^{k+1} - 1
+```
+
+**Step 3: Inductive Step**
+
+We need to show the formula holds for $n = k + 1$:
+
+```math
+1 + 2 + 2^2 + \cdots + 2^k + 2^{k+1} = 2^{(k+1)+1} - 1 = 2^{k+2} - 1
+```
+
+Start with the inductive hypothesis:
+
+```math
+1 + 2 + 2^2 + \cdots + 2^k = 2^{k+1} - 1
+```
+
+Add $2^{k+1}$ to both sides:
+
+```math
+(1 + 2 + 2^2 + \cdots + 2^k) + 2^{k+1} = (2^{k+1} - 1) + 2^{k+1}
+```
+
+Simplify the right-hand side:
+
+```math
+2^{k+1} - 1 + 2^{k+1} = 2 \cdot 2^{k+1} - 1 = 2^{k+2} - 1
+```
+
+Thus, the formula holds for $n = k + 1$.
+
 ## Summation
 General Formula for Summation over Cartesian Product
 
