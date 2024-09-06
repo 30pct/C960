@@ -634,3 +634,24 @@ d_{14} = -2^{14} + 3^{14} = -16384 + 4782969 = 4766585
 ```
 # 4. Counting
 ## Counting Rules
+**Product rule**
+
+If one event can occur in $m$ ways and a second independent event can occur in $n$ ways, then the total number of ways the two events can occur in sequence is $m \times n$.
+
+**Example:** 
+
+Suppose you are getting dressed and need to choose an outfit. You have 3 different shirts (red, blue, and green) and 2 different pairs of pants (jeans and khakis). How many different outfits can you put together?
+
+To solve this, use the product rule:
+
+1. Choose a shirt: There are 3 options (red, blue, green).
+2. Choose a pair of pants: There are 2 options (jeans, khakis).
+
+According to the product rule, the total number of outfits you can create is:
+```math
+3 \text{ shirts} \times 2 \text{ pants} = 6 \text{ outfits}
+```
+
+Therefore, you can make 6 different outfits.
+
+---
