@@ -506,17 +506,135 @@ Simplify the right-hand side:
 
 Thus, the formula holds for $n = k + 1$.
 
-## Summation
-General Formula for Summation over Cartesian Product
+## Simple Recurrence Relations
 
-When you sum the product of all elements from two sets, you're essentially summing over the Cartesian product:
+For the recurrence relation $d_n = 5d_{n-1} - 6d_{n-2}$, answer the following questions:
+
+**What is the characteristic equation?**
+
+To find the characteristic equation for the recurrence relation $d_n = 5d_{n-1} - 6d_{n-2}$, assume a solution of the form $d_n = r^n$. Substituting this into the recurrence relation gives:
 
 ```math
-\sum_{(x, y) \in A \times B} x \cdot y
+r^n = 5r^{n-1} - 6r^{n-2}
 ```
 
-For two sets of numbers $A = \{a_1, a_2, \ldots, a_m\}$ and $B = \{b_1, b_2, \ldots, b_n\}$, the general formula for summing the product of every combination of their elements is:
+Dividing through by $r^{n-2}$ gives:
 
 ```math
-\text{Sum} = \left( \sum_{a \in A} a \right) \times \left( \sum_{b \in B} b \right)
+r^2 = 5r - 6
+```
+
+Rearranging:
+
+```math
+r^2 - 5r + 6 = 0
+```
+
+Thus, the characteristic equation is:
+
+```math
+r^2 - 5r + 6 = 0
+```
+
+**What are the roots of the characteristic equation?**
+
+To find the roots of the characteristic equation $r^2 - 5r + 6 = 0$, factor the quadratic equation:
+
+```math
+r^2 - 5r + 6 = (r - 2)(r - 3) = 0
+```
+
+Thus, the roots are:
+
+```math
+r = 2 \quad \text{and} \quad r = 3
+```
+
+**Find the closed-form expression for $d_n$.**
+
+Since the roots are real and distinct, the general solution to the recurrence relation is of the form:
+
+```math
+d_n = A \cdot 2^n + B \cdot 3^n
+```
+
+We need to use the initial conditions $d_0 = 2$ and $d_1 = 7$ to find $A$ and $B$.
+
+- For $n = 0$:
+
+```math
+d_0 = A \cdot 2^0 + B \cdot 3^0 = A + B = 2
+```
+
+Thus, $A + B = 2$.
+
+- For $n = 1$:
+
+```math
+d_1 = A \cdot 2^1 + B \cdot 3^1 = 2A + 3B = 7
+```
+
+Thus, $2A + 3B = 7$.
+
+Now, solve the system of equations:
+
+1. $A + B = 2$
+2. $2A + 3B = 7$
+
+From the first equation, solve for $A$:
+
+```math
+A = 2 - B
+```
+
+Substitute this into the second equation:
+
+```math
+2(2 - B) + 3B = 7
+```
+
+```math
+4 - 2B + 3B = 7
+```
+
+```math
+4 + B = 7
+```
+
+```math
+B = 3
+```
+
+Now substitute $B = 3$ back into $A + B = 2$:
+
+```math
+A + 3 = 2 \quad \Rightarrow \quad A = -1
+```
+
+Thus, the closed-form expression for $d_n$ is:
+
+```math
+d_n = -1 \cdot 2^n + 3 \cdot 3^n = -2^n + 3^n
+```
+
+**What is $d_{10}$? What is $d_{14}$?**
+
+Now, use the closed-form expression to compute $d_{10}$ and $d_{14}$.
+
+- For $d_{10}$:
+
+```math
+d_{10} = -2^{10} + 3^{10} = -1024 + 59049 = 58025
+```
+
+- For $d_{14}$:
+
+```math
+d_{14} = -2^{14} + 3^{14} = -16384 + 4782969 = 4766585
+```
+
+Thus:
+
+```math
+d_{10} = 58025 \quad \text{and} \quad d_{14} = 4766585
 ```
