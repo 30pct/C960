@@ -655,3 +655,25 @@ According to the product rule, the total number of outfits you can create is:
 Therefore, you can make 6 different outfits.
 
 ---
+**Sum Rule**
+
+The Sum Rule states that if you have two tasks and the first task can be completed in $m$ ways and the second task in $n$ ways, and the two tasks cannot be done simultaneously, then there are $m + n$ total ways to perform one of these tasks.
+
+**Example:**
+
+Imagine you have a choice this weekend to either go to a movie or attend a concert. 
+
+1. There are 4 different movies you could go watch.
+2. There are 3 different concerts you could attend.
+
+According to the Sum Rule, because you cannot do both activities simultaneously, the total number of choices you have is the sum of the number of ways to do each activity separately. 
+
+Thus, the total number of ways to spend your weekend by choosing one of these two activities is:
+
+```math
+4 + 3 = 7
+```
+
+So, there are 7 different ways to choose either a movie or a concert to attend this weekend.
+
+---
