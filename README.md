@@ -677,3 +677,48 @@ Thus, the total number of ways to spend your weekend by choosing one of these tw
 So, there are 7 different ways to choose either a movie or a concert to attend this weekend.
 
 ---
+**Subtraction Rule**
+
+The rule of subtraction states that if you know the total number of possible outcomes and the number of undesirable outcomes, you can find the number of desirable outcomes by subtracting the undesirable ones from the total.
+
+**Problem:** How many bit strings of length eight either start with a 1 bit or end with the two bits 00? exp step by step using rule of subtraction
+
+**Step 1: Calculate the number of bit strings that start with a 1**
+
+An 8-bit string that starts with a 1 has the form $1xxxxxxx$, where each $x$ can be either 0 or 1. This means there are 7 positions that can each be independently chosen as either 0 or 1. Therefore, the number of such strings is:
+
+```math
+2^7 = 128
+```
+
+**Step 2: Calculate the number of bit strings that end with 00**
+
+An 8-bit string that ends with 00 has the form $xxxxxx00$, where each $x$ can be either 0 or 1. This means there are 6 positions that can each be independently chosen as either 0 or 1. Therefore, the number of such strings is:
+
+```math
+2^6 = 64
+```
+
+**Step 3: Calculate the number of bit strings that both start with 1 and end with 00**
+
+An 8-bit string that both starts with a 1 and ends with 00 has the form $1xxxxx00$, where each $x$ can be either 0 or 1. This means there are 5 positions that can each be independently chosen as either 0 or 1. Therefore, the number of such strings is:
+
+```math
+2^5 = 32
+```
+
+**Step 4: Apply the rule of subtraction (inclusion-exclusion principle)**
+
+To find the number of bit strings that either start with a 1 or end with 00, we add the number of strings that start with a 1 and the number of strings that end with 00, and then subtract the number of strings that do both (to correct for double-counting).
+
+The calculation is as follows:
+
+```math
+128 + 64 - 32 = 160
+```
+
+**Conclusion**
+
+There are 160 bit strings of length eight that either start with a 1 or end with the two bits 00.
+
+---
