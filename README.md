@@ -722,3 +722,8 @@ The calculation is as follows:
 There are 160 bit strings of length eight that either start with a 1 or end with the two bits 00.
 
 ---
+## Pigeonhole Principle
+If n pigeons are placed in k pigeonholes, then at least r of them are placed in 1 pigeonhole:
+```math
+\left\lceil \frac{n}{k} \right\rceil \ge r
+```
