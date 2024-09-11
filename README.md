@@ -634,13 +634,10 @@ d_{14} = -2^{14} + 3^{14} = -16384 + 4782969 = 4766585
 ```
 # 4. Counting
 ## Counting Rules
-**Product rule**
-
+### Product rule
 If one event can occur in $m$ ways and a second independent event can occur in $n$ ways, then the total number of ways the two events can occur in sequence is $m \times n$.
 
-**Example:** 
-
-Suppose you are getting dressed and need to choose an outfit. You have 3 different shirts (red, blue, and green) and 2 different pairs of pants (jeans and khakis). How many different outfits can you put together?
+You have 3 different shirts (red, blue, and green) and 2 different pairs of pants (jeans and khakis). How many different outfits can you put together?
 
 To solve this, use the product rule:
 
@@ -654,12 +651,9 @@ According to the product rule, the total number of outfits you can create is:
 
 Therefore, you can make 6 different outfits.
 
----
-**Sum Rule**
+### Sum Rule
 
 The Sum Rule states that if you have two tasks and the first task can be completed in $m$ ways and the second task in $n$ ways, and the two tasks cannot be done simultaneously, then there are $m + n$ total ways to perform one of these tasks.
-
-**Example:**
 
 Imagine you have a choice this weekend to either go to a movie or attend a concert. 
 
@@ -676,12 +670,11 @@ Thus, the total number of ways to spend your weekend by choosing one of these tw
 
 So, there are 7 different ways to choose either a movie or a concert to attend this weekend.
 
----
-**Subtraction Rule**
+### Subtraction Rule / Principle of Inclusion-Exclusion
 
 The rule of subtraction states that if you know the total number of possible outcomes and the number of undesirable outcomes, you can find the number of desirable outcomes by subtracting the undesirable ones from the total.
 
-**Problem:** How many bit strings of length eight either start with a 1 bit or end with the two bits 00? exp step by step using rule of subtraction
+**Problem:** How many bit strings of length eight either start with a 1 bit or end with the two bits 00?
 
 **Step 1: Calculate the number of bit strings that start with a 1**
 
@@ -707,7 +700,7 @@ An 8-bit string that both starts with a 1 and ends with 00 has the form $1xxxxx0
 2^5 = 32
 ```
 
-**Step 4: Apply the rule of subtraction (inclusion-exclusion principle)**
+**Step 4: Apply the rule of subtraction**
 
 To find the number of bit strings that either start with a 1 or end with 00, we add the number of strings that start with a 1 and the number of strings that end with 00, and then subtract the number of strings that do both (to correct for double-counting).
 
@@ -720,10 +713,3 @@ The calculation is as follows:
 **Conclusion**
 
 There are 160 bit strings of length eight that either start with a 1 or end with the two bits 00.
-
----
-## Pigeonhole Principle
-If n pigeons are placed in k pigeonholes, then at least r of them are placed in 1 pigeonhole:
-```math
-\left\lceil \frac{n}{k} \right\rceil \ge r
-```
